@@ -2,3 +2,4 @@ node_modules
 dist
 template
 *.log
+stats.md
