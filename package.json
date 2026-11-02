@@ -1,0 +1,63 @@
+{
+  "name": "@maxhub/max-front-app",
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-messenger/max-front-app.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/max-messenger/max-front-app/issues"
+  },
+  "homepage": "https://github.com/max-messenger/max-front-app#readme",
+  "scripts": {
+    "dev": "vite",
+    "dev-mock": "VITE_MOCK=true vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "analyze": "vite build --mode analyze",
+    "prepare": "husky",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
+  },
+  "dependencies": {
+    "@maxhub/max-ui": "^0.9.0",
+    "@tanstack/react-query": "5.101.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router": "8.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "eruda": "3.4.3",
+    "eslint": "10.8.1",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.4",
+    "eslint-plugin-simple-import-sort": "14.0.0",
+    "globals": "17.11.0",
+    "husky": "9.1.7",
+    "lint-staged": "^15.2.0",
+    "rollup-plugin-visualizer": "7.1.1",
+    "sass": "1.102.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.67.0",
+    "vite": "8.3.5"
+  },
+  "allowScripts": {
+    "@parcel/watcher": true,
+    "fsevents": true
+  }
+}

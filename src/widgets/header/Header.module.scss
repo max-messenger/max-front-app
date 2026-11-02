@@ -1,0 +1,17 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  display: grid;
+  gap: 16px;
+  padding-top: max(16px, env(safe-area-inset-top));
+  padding-bottom: 14px;
+  background: var(--background-primary);
+}
+
+.header {
+  padding-top: 4px;
+}

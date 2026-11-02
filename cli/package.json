@@ -1,0 +1,63 @@
+{
+  "name": "@maxhub/create-max-front-app",
+  "version": "1.0.0",
+  "description": "CLI для создания нового проекта на базе max-front-app",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-messenger/max-front-app.git",
+    "directory": "cli"
+  },
+  "homepage": "https://github.com/max-messenger/max-front-app#readme",
+  "bugs": {
+    "url": "https://github.com/max-messenger/max-front-app/issues"
+  },
+  "bin": {
+    "create-max-front-app": "./dist/index.cjs"
+  },
+  "files": [
+    "dist",
+    "template",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare-template": "node prepare-template.mjs",
+    "build": "node prepare-template.mjs && node build.mjs",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.cjs",
+    "typecheck": "tsc --noEmit",
+    "release": "release-it",
+    "release:dry": "release-it --dry-run",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.2.0",
+    "prompts": "^2.4.2"
+  },
+  "overrides": {
+    "basic-ftp": "^6.2.3",
+    "undici": "^7.30.1"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^12.0.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.0",
+    "@types/prompts": "^2.4.9",
+    "esbuild": "^0.28.2",
+    "release-it": "^21.1.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "fsevents": true
+  }
+}
